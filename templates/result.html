@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+</head>
+<body bgcolor="DarkTurquoise";>
+
+	<header>
+		<div class="container">
+		
+		<h1>Amazon Product Review classifier</h1>
+		
+	</div>
+	</header>
+	<p style="color:navy;font-size:20;text-align: center;"><center><h2>Review Label</h2></center></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 'neu'%}
+	<h2 style="color:green;text-align: center;">Neutral Review</h2>
+	{% elif prediction == 'neg'%}
+	<h2 style="color:purple;text-align: center;">Negative Review</h2>
+        {% elif prediction == 'pos'%}
+	<h2 style="color:maroon;text-align: center;">Positive Review</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
